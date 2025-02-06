@@ -154,7 +154,7 @@ section .button-div button:hover::after {
 
 @media (max-width: 470px) {
     body {
-        background-image: url(assets/home/background-home-mobile.jpg);
+        background-image: url(../assets/home/background-home-mobile.jpg);
     }
 }
 
