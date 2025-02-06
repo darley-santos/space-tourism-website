@@ -1,0 +1,160 @@
+
+/* configuraçoes dos textos da pagina home */
+body {
+    background-image: url(/assets/home/background-home-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section.content  {
+    height: calc(100vh - 100px);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+section .text-div {
+    width: 40%;
+}
+
+section .button-div {
+    background-color: darkgray;
+}
+
+.text-div .text {
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 0.1em;
+    color: #fffff1af;
+    font-family: sans-serif;
+}
+
+.text-div .space {
+    font-size: 7em;
+    letter-spacing: 5px;
+    font-weight: 500;
+    display: block;
+    margin-left: 5px;
+    margin-bottom: 0.15em;
+}
+
+.text-div .big-text {
+    font-size: 0.9em;
+    line-height: 1.6em;
+    text-align: justify;
+    width: 65%;
+    color: #fffff1af;
+    font-family: sans-serif;
+}
+
+/* configuraçoes do botão explore */
+section .button-div {
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    margin-top: 8em;
+    background-color: transparent;
+}
+section .button-div button {
+    position: relative;
+    height: 15em;
+    width: 15em;
+    border-radius: 50%;
+    border: none;
+}
+section .button-div a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 2em;
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    color: #000;
+    transition: color 0.3s linear, text-shadow 0.5s linear;
+    z-index: 2;
+}
+
+section .button-div a {
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+}
+
+section .button-div button::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    height: 0;
+    border-radius: 50%;
+    background-color: #000000;
+    z-index: 1;
+}
+section .button-div button:hover::after {
+    animation: explore-button 0.3s linear forwards;
+}
+.button-div button:hover a {
+    color: #fff
+}
+@keyframes explore-button {
+    0% {
+        width: 0;
+        height: 0;
+    }
+    50% {
+        width: 50%;
+        height: 50%;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+    }
+    
+}
+
+@media (max-width: 1000px) {
+    body {
+        background-image: url(/assets/home/background-home-tablet.jpg);
+        height: 100vh;
+    }
+
+    section.content {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    section .text-div {
+        width: 100%;
+        margin-top: 3em
+    }
+    
+    .text-div .space {
+        text-align: center;
+        font-size: 6em;
+    }
+
+    .text-div .text {
+        font-size: 0.8em;
+        text-align: center;
+    }
+
+    .text-div .big-text {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    section .button-div {
+        margin-top: 2em;
+    }
+}
+
+@media (max-width: 470px) {
+    body {
+        background-image: url(/assets/home/background-home-mobile.jpg);
+    }
+}
+

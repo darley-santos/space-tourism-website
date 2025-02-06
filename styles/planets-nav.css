@@ -1,0 +1,46 @@
+.planets-nav ul {
+    display: flex;
+    gap: 2vw;
+    padding: 10 10px 10px 0;
+    list-style: none;
+}
+
+.planets-nav ul li a {
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: text-shadow 0.2s linear;
+    color: #ffffffc4;
+}
+
+.planets-nav ul li a:hover {
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+}
+
+.planets-nav ul li a::after {
+    content: " ";
+    position: absolute;
+    bottom: -25%;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    border-radius: 50%;
+    background-color: #fff;
+    visibility: hidden;
+  }
+
+  .planets-nav ul li.active a::after {
+    visibility: visible;
+  }
+
+  @media (max-width: 1000px) {
+    .planets-nav {
+      display: flex;
+      margin-top: 2em;
+      justify-content: center;
+      align-items: center;
+    }
+  }

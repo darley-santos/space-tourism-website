@@ -1,0 +1,105 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0 0 25px;
+}
+
+.navigation {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  backdrop-filter: blur(35px);
+}
+/* configuraçao da lista de links */
+.navbar-list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.navbar-list li span {
+  margin-right: 10px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.navbar-list li a {
+  text-decoration: none;
+  padding: 10px;
+  color: #fffff1e7;
+  transition: text-shadow 0.2s linear;
+}
+
+.navbar-list li a:hover {
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+}
+
+.navbar-list li {
+  position: relative;
+}
+
+.logo {
+  vertical-align: middle;
+  margin: auto 0;
+}
+/* configuraçao da linha entre a logo e os links */
+.navbar-list::before {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: -42%;
+  width: 45%;
+  display: inline-block;
+  border-top: 1px solid rgba(71, 70, 70, 0.63);
+  z-index: -2;
+}
+/* configuraçao da lista branca abaixo do link */
+.navbar-list li a::after {
+  content: " ";
+  position: absolute;
+  bottom: -19px;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  visibility: hidden;
+}
+.navbar-list li.active a::after {
+  visibility: visible;
+}
+
+@media (max-width: 1000px) {
+  .navbar-list::before {
+    display: none;
+  }
+
+  .header {
+    align-items: center;
+  }
+
+  .navigation {
+    width: 75%;
+    backdrop-filter: blur(0);
+  }
+
+  .navbar-list {
+    font-size: 10px;
+    gap: 5px;
+  }
+
+  .navbar-list li span {
+    display: none;
+  }
+}
+
+@media (max-width: 430px) {
+  .header {
+    padding: 1em 2em 0 1em;
+  }
+}

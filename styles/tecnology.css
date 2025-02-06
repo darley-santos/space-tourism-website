@@ -1,0 +1,138 @@
+body {
+  background-image: url(/assets/technology/background-technology-desktop.jpg);
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-left: 10vw;
+}
+
+#div1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5em;
+}
+
+.title {
+  padding: 5vw 0 0 8vw;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.title span {
+  font-size: 1.2em;
+  margin-right: 1em;
+  color: #fcfbf996;
+}
+
+.title h1 {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 400;
+  display: inline-block;
+}
+
+.CarouselLinkList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.CarouselLink {
+  background-color: transparent;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2em;
+  height: 3em;
+  width: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border: #ffffffb4 1px solid;
+  border-radius: 50%;
+  transition: color, background-color 0.1s linear;
+}
+
+.CarouselLink:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.subtitle-div h2 {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: 400;
+  color: #ffffffc5;
+}
+
+.subtitle-div span {
+  font-size: 3em;
+}
+
+.big-text {
+  margin-top: 1em;
+  font-size: 0.8em;
+  line-height: 1.6em;
+  color: #ffffffc5;
+  width: 68%;
+}
+
+#div2 img {
+  width: 25em;
+  margin-bottom: 3em;
+  object-fit: cover;
+}
+
+.clicked {
+  background-color: #fff;
+  color: #000;
+}
+
+@media (max-width: 1000px) {
+  section {
+    margin-left: 0;
+    display: block;
+  }
+
+  #div1 {
+    display: block;
+  }
+
+  .title {
+    margin-top: 3em;
+    padding: 0;
+    text-align: center;
+  }
+
+  .title span {
+    margin-right: 0.5em;
+  }
+
+  .CarouselLinkList {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 3em;
+  }
+
+  .subtitle-div {
+    text-align: center;
+    margin-top: 2em;
+  }
+
+  .big-text {
+    width: 80%;
+    text-align: center;
+    margin: 2em auto;
+  }
+
+  #div2 img {
+    display: block;
+    width: 90%;
+    margin: 3em auto;
+  }
+}
