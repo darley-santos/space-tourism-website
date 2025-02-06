@@ -72,7 +72,7 @@ section {
 
 @media (max-width: 1000px) {
   body {
-    background-image: url(/assets/destination/background-destination-tablet.jpg);
+    background-image: url(../assets/destination/background-destination-tablet.jpg);
   }
 
   section {
@@ -114,7 +114,7 @@ section {
 
 @media (max-width: 430px) {
     body {
-        background-image: url(/assets/destination/background-destination-mobile.jpg);
+        background-image: url(../assets/destination/background-destination-mobile.jpg);
         height: 100%;
     }
 }
