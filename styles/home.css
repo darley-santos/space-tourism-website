@@ -1,7 +1,7 @@
 
 /* configuraçoes dos textos da pagina home */
 body {
-    background-image: url(assets/home/background-home-desktop.jpg);
+    background-image: url(../assets/home/background-home-desktop.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -118,7 +118,7 @@ section .button-div button:hover::after {
 
 @media (max-width: 1000px) {
     body {
-        background-image: url(assets/home/background-home-tablet.jpg);
+        background-image: url(../assets/home/background-home-tablet.jpg);
         height: 100vh;
     }
 
