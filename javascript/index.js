@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    highlightActiveLinks(".navbar-list li", "active");
+    highlightActiveLinks(".navbar-list li a", "active");
     highlightActiveLinks(".carousel-link", "actived");
     highlightActiveLinks(".CarouselLink", "clicked");
 });
