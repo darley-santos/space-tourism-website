@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         links.forEach(link => {
             if (link.getAttribute("href") && currentPath.includes(link.getAttribute("href"))) {
-                link.parentElement.classList.add(activeClass);
+                link.classList.add(activeClass);
             }
         });
     }
