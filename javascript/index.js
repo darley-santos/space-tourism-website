@@ -1,22 +1,26 @@
 document.addEventListener("DOMContentLoaded", function() {
-    function highlightActiveLinks(selector, activeClass) {
-        const links = document.querySelectorAll(selector); 
+    function highlightActiveLinks(selector, activeClass, isNav) {
+        const links = document.querySelectorAll(selector);
         const currentPath = window.location.pathname;
 
         links.forEach(link => {
-            const listItem = link.parentElement; // Pega o item de lista (li)
-
-            // Remove a classe ativa do item de lista antes de adicionar novamente
-            listItem.classList.remove(activeClass);
-
-            // Verifica se o link corresponde ao caminho atual
             if (link.getAttribute("href") && currentPath.includes(link.getAttribute("href"))) {
-                listItem.classList.add(activeClass); // Adiciona a classe no item de lista
+                // Para a navegação, adicione a classe no item de lista (<li>)
+                if (isNav) {
+                    const listItem = link.parentElement;
+                    listItem.classList.add(activeClass);
+                } else {
+                    // Para o carrossel, adicione a classe diretamente no link
+                    link.classList.add(activeClass);
+                }
             }
         });
     }
 
-    highlightActiveLinks(".navbar-list li a", "active"); // Para os links no menu de navegação
-    highlightActiveLinks(".carousel-link", "actived");   // Para os links do carrossel
-    highlightActiveLinks(".CarouselLink", "clicked");    // Para outros links do carrossel
+    // Chamada para o menu de navegação
+    highlightActiveLinks(".navbar-list li a", "active", true); // Para a navegação, usa o <li>
+
+    // Chamada para os links dos carrosséis
+    highlightActiveLinks(".carousel-link", "actived", false); // Para o carrossel 1
+    highlightActiveLinks(".CarouselLink", "clicked", false); // Para o carrossel 2
 });
